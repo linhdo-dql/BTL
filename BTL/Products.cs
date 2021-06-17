@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace BTL.App_Code
+namespace BTL
 {
     public class Products
     {
@@ -13,10 +13,11 @@ namespace BTL.App_Code
         public string price { get; set; }
         public string detail { get; set; }
         public string type { get; set; }
+
         public Products()
         {
-
         }
+
         public Products(string id, string img, string name, string price, string detail, string type)
         {
             this.id = id;

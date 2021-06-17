@@ -11,7 +11,7 @@
        
     </style>
 </head>
-<body>
+<body runat="server">
     <div class="headerMid">
         <div class="headerMid-logo">
             <img src="Assets/Images/logoweb2.png"/>
@@ -112,8 +112,15 @@
             <div class="product-container1">
                 <h1>Sản phẩm bán chạy</h1>
                 <hr>
-                
+                <div id="product1" class="product-container1-list" runat="server">
+                    
+                </div>
             </div>
     </div>
+    <form id="form1" runat="server">
+        <div>
+            <asp:GridView ID="GridView1" runat="server"></asp:GridView>
+        </div>
+    </form>
 </body>
 </html>

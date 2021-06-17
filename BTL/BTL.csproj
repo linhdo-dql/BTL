@@ -43,7 +43,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=4.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.4.1.1\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="protobuf-net, Version=2.0.0.668, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <HintPath>..\packages\protobuf-net.2.0.0.668\lib\net40\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Text, Version=3.9.38.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ServiceStack.Text.3.9.38\lib\net35\ServiceStack.Text.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -60,6 +69,21 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Unipluss.Sign.Client, Version=1.0.2881.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unipluss.Sign.Client.1.0.2881\lib\net40\Unipluss.Sign.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Unipluss.Sign.Client.Common, Version=1.0.2881.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unipluss.Sign.Client.1.0.2881\lib\net4\Unipluss.Sign.Client.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Unipluss.Sign.Common.Rest, Version=1.0.2881.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unipluss.Sign.Client.1.0.2881\lib\net4\Unipluss.Sign.Common.Rest.dll</HintPath>
+    </Reference>
+    <Reference Include="Unipluss.Sign.Common.Validation, Version=1.0.2881.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unipluss.Sign.Client.1.0.2881\lib\net4\Unipluss.Sign.Common.Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="Unipluss.Sign.ExternalContract, Version=1.0.2881.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unipluss.Sign.Client.1.0.2881\lib\net4\Unipluss.Sign.ExternalContract.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
@@ -1723,19 +1747,55 @@
     <Content Include="Assets\Images\banner2.png" />
     <Content Include="Assets\Images\bannerright.jpg" />
     <Content Include="Assets\Images\logoweb2.png" />
+    <Content Include="Assets\Images\nam\nam1.jpg" />
+    <Content Include="Assets\Images\nam\nam2.jpg" />
+    <Content Include="Assets\Images\nam\nam3.jpg" />
+    <Content Include="Assets\Images\nam\nam4.jpg" />
+    <Content Include="Assets\Images\nam\nam5.jpg" />
+    <Content Include="Assets\Images\nam\nam6.jpg" />
+    <Content Include="Assets\Images\nam\nam7.jpg" />
+    <Content Include="Assets\Images\nam\nam8.jpg" />
+    <Content Include="Assets\Images\nam\nam9.jpg" />
+    <Content Include="Assets\Images\nu\nu1.jpg" />
+    <Content Include="Assets\Images\nu\nu10.jpg" />
+    <Content Include="Assets\Images\nu\nu11.jpg" />
+    <Content Include="Assets\Images\nu\nu12.jpg" />
+    <Content Include="Assets\Images\nu\nu2.jpg" />
+    <Content Include="Assets\Images\nu\nu3.jpg" />
+    <Content Include="Assets\Images\nu\nu4.jpg" />
+    <Content Include="Assets\Images\nu\nu5.jpg" />
+    <Content Include="Assets\Images\nu\nu6.jpg" />
+    <Content Include="Assets\Images\nu\nu7.jpg" />
+    <Content Include="Assets\Images\nu\nu8.jpg" />
+    <Content Include="Assets\Images\nu\nu9.jpg" />
+    <Content Include="Assets\Images\phukien\phukien1.jpg" />
+    <Content Include="Assets\Images\phukien\phukien10.jpg" />
+    <Content Include="Assets\Images\phukien\phukien11.jpg" />
+    <Content Include="Assets\Images\phukien\phukien12.jpg" />
+    <Content Include="Assets\Images\phukien\phukien2.jpg" />
+    <Content Include="Assets\Images\phukien\phukien3.jpg" />
+    <Content Include="Assets\Images\phukien\phukien4.jpg" />
+    <Content Include="Assets\Images\phukien\phukien5.jpg" />
+    <Content Include="Assets\Images\phukien\phukien6.jpg" />
+    <Content Include="Assets\Images\phukien\phukien7.jpg" />
+    <Content Include="Assets\Images\phukien\phukien8.jpg" />
+    <Content Include="Assets\Images\phukien\phukien9.jpg" />
     <Content Include="Detail.aspx" />
+    <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
     <Content Include="Home.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Code\Products.cs" />
     <Compile Include="Detail.aspx.cs">
       <DependentUpon>Detail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Detail.aspx.designer.cs">
       <DependentUpon>Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
@@ -1744,6 +1804,7 @@
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Products.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -1817,7 +1878,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Code\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

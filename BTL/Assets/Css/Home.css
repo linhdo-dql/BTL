@@ -349,3 +349,25 @@ body {
         height: 5px;
         margin: 30px auto;
     }
+
+    .product-container1-list {
+        display:flex;
+        justify-content:flex-start;
+        margin:30px 30px;
+        flex-wrap:wrap;
+        padding:30px;
+    }
+    .product-container1-list-items {
+        flex:1;
+        min-width:200px;
+        margin:20px;
+    }
+    .product-items-img {
+        width:100%;
+    }
+    .product-items-name {
+
+    }
+    .product-items-price {
+
+    }
