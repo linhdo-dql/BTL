@@ -1,0 +1,351 @@
+﻿@font-face {
+    font-family: Lexend-SemiBold;
+    src: url("../Font/Lexend-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: Lexend-Bold;
+    src: url("../Font/Lexend-Bold.ttf");
+}
+
+@font-face {
+    font-family: Lexend-ExtraBold;
+    src: url("../Font/Lexend-ExtraBold.ttf");
+}
+
+@font-face {
+    font-family: Lexend-Light;
+    src: url("../Font/Lexend-Light.ttf");
+}
+
+@font-face {
+    font-family: Lexend-Thin;
+    src: url("../Font/Lexend-Thin.ttf");
+}
+
+@font-face {
+    font-family: Lexend-Regular;
+    src: url("../Font/Lexend-Regular.ttf");
+}
+
+@font-face {
+    font-family: Lexend-Medium;
+    src: url("../Font/Lexend-Medium.ttf");
+}
+
+@font-face {
+    font-family: Allura-Regular;
+    src: url("../Font/Allura-Regular.ttf");
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #e8e8e893;
+}
+
+.headerMid {
+    clear: both;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    background-color: #e8e8e8;
+}
+
+.headerMid-logo {
+    flex: 1;
+    text-align: center;
+}
+
+    .headerMid-logo img {
+        width: 100px;
+        height: 100px;
+        margin-left: 50px;
+    }
+
+.headerMid-menu-left {
+    height: auto;
+    flex: 5;
+}
+
+.headerMid-menu-left_list {
+    list-style-type: none;
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    font-family: Lexend-Bold;
+    font-size: 1.1rem;
+}
+
+.headerMid-menu-left_list_items {
+    margin-top: 20px;
+    margin-right: 30px;
+}
+
+.headerMid-menu-right {
+    height: auto;
+    float: left;
+    width: 100%;
+    float: left;
+    flex: 3;
+    display: flex;
+}
+
+.headerMid-menu-right {
+}
+
+.list-icon {
+    display: flex;
+    margin-top: 35px;
+    margin-right: 50px;
+}
+
+    .list-icon i {
+        font-size: 20px;
+        margin-right: 15px;
+    }
+
+.search_box {
+    padding-top: 13px;
+    flex-grow: 1;
+    display: flex;
+    opacity: 60%;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.search_form {
+    background-color: white;
+    height: 25px;
+    border-radius: 15px;
+    margin-top: 22px;
+    margin-right: 20px;
+}
+
+.input_search {
+    border: none;
+    width: 150px;
+    height: 100%;
+    padding-top: 0em;
+    margin-left: 10px;
+    background-color: transparent;
+}
+
+.btn_search {
+    margin-right: 8px;
+    margin-top: 5px;
+    border: none;
+    background-color: transparent;
+}
+
+    .btn_search > i {
+        align-items: center;
+        color: #000;
+    }
+
+.search_box:hover {
+    opacity: 100%;
+}
+
+.content-right {
+    width: 100%;
+    height: 1700px;
+}
+
+.banner {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: #e8e8e8;
+}
+
+.banner-img1 {
+    height: 800px;
+}
+
+.banner-img2 {
+    height: 800px;
+}
+
+.content-banner {
+    text-align: center;
+    margin-left: 110px;
+    margin-right: 90px;
+    margin-top: 200px;
+}
+
+#tt1 {
+    text-align: left;
+    margin-top: 500px;
+    font-size: 5rem;
+    font-family: Allura-Regular;
+}
+
+#tt2 {
+    text-align: left;
+    margin-top: 200px;
+    font-size: 3rem;
+    width: 100%;
+    font-family: Lexend-Regular;
+}
+
+#tt3 {
+    text-align: center;
+    margin-top: 200px;
+    width: 100%;
+    font-size: 3rem;
+    font-family: Lexend-Bold;
+}
+
+#btnShopNow {
+    background-color: black;
+    color: white;
+    width: 30%;
+    font-size: 1.5em;
+    font-family: Lexend-Regular;
+    border-radius: 40px;
+    margin-top: 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.service {
+    display: flex;
+    width: 100%;
+}
+
+.itemservice {
+    flex: 1;
+    display: flex;
+    margin: 30px 30px;
+    padding: 30px;
+    justify-content: center;
+    border: solid 2px black;
+    border-radius: 5px;
+}
+
+    .itemservice i {
+        font-size: 3.5rem;
+        color: rgb(255, 187, 0);
+    }
+
+.itemservice-content {
+    margin-left: 20px;
+    padding: 0;
+    font-family: Lexend-Bold;
+    margin-top: 0;
+    font-size: 1.6rem;
+}
+
+.itemservice-content_child {
+    margin-top: 2px;
+    font-size: 0.5em;
+    font-family: Lexend-Regular;
+}
+
+.menu-image {
+    display: flex;
+    width: 100%;
+    height: 610px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 30px;
+}
+
+.menu-image-left {
+    flex: 3;
+    background-image: url("../Images/banner-left.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.menu-image-right {
+    flex: 2;
+    height: auto;
+    padding-left: 10px;
+}
+
+.menu-image-right-0 {
+    width: 100%;
+    height: 300px;
+    background-image: url("../Images/bannerright.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.menu-image-right-1 {
+    width: 100%;
+    height: 300px;
+    margin-top: 10px;
+    background-image: url("../Images/banner-right11.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.menu-image-left p {
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+    font-size: 4.5rem;
+    text-align: center;
+    margin-top: 250px;
+    text-shadow: 2px 2px #fff;
+}
+
+.menu-image-right {
+    text-align: center;
+}
+
+.menu-image-right-0 {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    padding-top: 125px;
+    font-size: 2.5rem;
+    text-align: center;
+    text-shadow: 2px 2px #000;
+}
+
+.menu-image-right-1 {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    padding-top: 125px;
+    font-size: 2.5rem;
+    text-align: center;
+    text-shadow: 2px 2px #000;
+}
+
+#btnWatchNow {
+    background-color: red;
+    color: white;
+    opacity: 80%;
+    width: 15%;
+    font-size: 1em;
+    border-radius: 40px;
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.product-container1 {
+    width: 100%;
+}
+
+    .product-container1 h1 {
+        text-align: center;
+        width: 50%;
+        font-family: Lexend-Bold;
+        font-size: 3rem;
+        margin: 0 auto;
+    }
+
+    .product-container1 hr {
+        text-align: center;
+        width: 30%;
+        background-color: black;
+        height: 5px;
+        margin: 30px auto;
+    }
