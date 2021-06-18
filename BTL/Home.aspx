@@ -7,9 +7,7 @@
     <title></title>
     <link href="~/Assets/Css/Home.css" type="text/css" rel="stylesheet" runat="server"/>
     <link href="~/Assets/Icon/css/all.min.css" type="text/css" rel="stylesheet"/>
-    <style>
-       
-    </style>
+    <script src="Assets/js/Home.js" type="text/javascript"></script>
 </head>
 <body runat="server">
     <div class="headerMid">
@@ -50,7 +48,20 @@
             <div class="list-icon">
                 <i class="far fa-heart" aria-hidden="true"></i>
                 <i class="far fa-user"></i>
-                <i class="fas fa-shopping-bag"></i>
+                <i class="fas fa-shopping-bag" onclick="return cartClick();"></i>
+                <p id="numberItems" class="number-items" runat="server"></p>
+                <div class="cart" id="cart-home">
+                    <h5>Sản phẩm đã chọn</h5>
+                    <div id="cartlistItems" runat="server">
+
+                    </div>
+                    <div class="cart-container-button">
+                        <span id="allMoney" runat="server">Tổng tiền: 12000000</span>
+                        <a href="Cart.aspx"><button id="btnPay">Thanh Toán</button></a>
+                    </div>
+                    
+                    </div>
+                </div>
             </div>
             
         </div>
@@ -110,17 +121,21 @@
                 </div>
             </div>
             <div class="product-container1">
-                <h1>Sản phẩm bán chạy</h1>
-                <hr>
+                 <h1><i>Siêu giảm giá!</i></h1>
+                <hr />
                 <div id="product1" class="product-container1-list" runat="server">
-                    
                 </div>
+                <input type="button" value="Xem Thêm" id="btnShowMore1"/>
             </div>
+            <div class="product-container2">
+                 <h1>Hàng mới về</h1>
+                <hr />
+                <div id="product2" class="product-container1-list" runat="server">
+                </div>
+                <input type="button" value="Xem Thêm" id="btnShowMore2"/>
+            </div>
+        
     </div>
-    <form id="form1" runat="server">
-        <div>
-            <asp:GridView ID="GridView1" runat="server"></asp:GridView>
-        </div>
-    </form>
+   
 </body>
 </html>

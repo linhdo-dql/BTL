@@ -1780,6 +1780,8 @@
     <Content Include="Assets\Images\phukien\phukien7.jpg" />
     <Content Include="Assets\Images\phukien\phukien8.jpg" />
     <Content Include="Assets\Images\phukien\phukien9.jpg" />
+    <Content Include="Assets\js\Home.js" />
+    <Content Include="Cart.aspx" />
     <Content Include="Detail.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
@@ -1787,6 +1789,14 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cart.cs" />
     <Compile Include="Detail.aspx.cs">
       <DependentUpon>Detail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
