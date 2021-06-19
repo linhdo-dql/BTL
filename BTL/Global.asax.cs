@@ -10,6 +10,11 @@ namespace BTL
         {
             Application["products"] = new List<Products>();
             List<Products> arrProduct = new List<Products>();
+
+            List<Products> arrFavourite = new List<Products>();
+
+            Application.Add("favourite", arrFavourite);
+
             //Nam
             arrProduct.Add(new Products() { id = "1", img = "Assets/Images/nam/nam1.jpg", name = "ÁO THUN NAM TRẮNG ĐƠN GIẢN", price = "99.000", oldprice="150.000", detail = "Thun Cá sấu Indo cao cấp, Mịn mát.", type = "nam" });
             arrProduct.Add(new Products() { id = "2", img = "Assets/Images/nam/nam2.jpg", name = "ÁO THUN NAM LONDON", price = "149.000", oldprice="200.000", detail = "Thun Cá sấu Indo cao cấp, Mịn mát.", type = "nam" });
@@ -74,7 +79,7 @@ namespace BTL
 
         protected void Session_End(object sender, EventArgs e)
         {
-
+            Application["cart"] = new List<Cart>();
         }
 
         protected void Application_End(object sender, EventArgs e)
