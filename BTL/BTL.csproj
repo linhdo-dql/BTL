@@ -91,6 +91,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Css\Detail.css" />
     <Content Include="Assets\Css\Home.css" />
     <Content Include="Assets\Icon\attribution.js" />
     <Content Include="Assets\Icon\css\all.css" />
@@ -1780,6 +1781,7 @@
     <Content Include="Assets\Images\phukien\phukien7.jpg" />
     <Content Include="Assets\Images\phukien\phukien8.jpg" />
     <Content Include="Assets\Images\phukien\phukien9.jpg" />
+    <Content Include="Assets\js\Detail.js" />
     <Content Include="Assets\js\Home.js" />
     <Content Include="Cart.aspx" />
     <Content Include="Detail.aspx" />

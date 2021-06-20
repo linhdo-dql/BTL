@@ -24,10 +24,24 @@ function myFunction() {
             cancelButtonText:
                 'Tiếp tục mua hàng',
         })
-    }
-
-    function heartclick() {
-
-    }
-    
+    }   
+}
+function dialogSizeColor() {
+    Swal.fire({
+        width: '30%',
+        position: 'top-end',
+        icon: 'success',
+        title: list.lastChild.innerHTML,
+        showCancelButton: true,
+        showConfirmButton: true,
+        confirmButtonText:
+            '<i class="fa fa-thumbs-up"></i> <a href="Cart.aspx" style="text-decoration:none; color:white;">Xem giỏ hàng!</a>',
+        cancelButtonText:
+            'Tiếp tục mua hàng',
+    })
+}
+function ht(obj) {
+    alert(obj.id);
+   /* var x = document.getElementById(obj.id);
+    x.innerHTML = "<i class='fas fa-heart' aria-hidden='true'></i>";*/
 }

@@ -69,8 +69,8 @@ namespace BTL
                    "<span id = 'product-items-price'> " + z.price + " </span>" +
                    "</div>" +
                    "<div class='container-button-items'>" +
-                   "<a href='Home.aspx?id=" + z.id + "'><button class='btnAddToCart' id='btnAddToCartx" + z.id + " runat='server'>Thêm vào giỏ</button><a>" +
-                   "<button class = 'btnAddToWhis' id = 'btnAddToWhis" + z.id + "' onclick='hearthClick()' ><i class='far fa-heart' aria-hidden='true'></i></button>" +
+                   "<button class='btnAddToCart' id='btnAddToCartx" + z.id + " runat='server' onclick='SizeColor()'>Thêm vào giỏ</button>" +
+                   "<button class = 'btnAddToWhis' id = 'btnAddToWhis" + z.id + "' onclick='return ht(this)' ><i class='far fa-heart' aria-hidden='true'></i></button>" +
                    "</div>" +
                    "</div>";
             }
@@ -146,7 +146,7 @@ namespace BTL
                 {
                     if (int.Parse(x.id) == int.Parse(a))
                     {
-                        c.Add(new Cart(x.img, x.name, "1", x.price));
+                       // c.Add(new Cart(x.img, x.name, "1", x.price));
                     }
                 }
                 Response.Redirect("Home.aspx#" + a);
@@ -181,10 +181,7 @@ namespace BTL
             return s.ToString();
         }
 
-        protected void clearCart_ServerClick(object sender, EventArgs e)
-        {
-            
-        }
+        
     }
     
 }
