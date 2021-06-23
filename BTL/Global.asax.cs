@@ -12,7 +12,6 @@ namespace BTL
             List<Products> arrProduct = new List<Products>();
 
             List<Products> arrFavourite = new List<Products>();
-
             Application.Add("favourite", arrFavourite);
 
             //Nam
@@ -55,6 +54,12 @@ namespace BTL
             Application["products"] = arrProduct;
 
             Application["cart"] = new List<Cart>();
+
+            List<Accounts> arrAccounts = new List<Accounts>();
+            arrAccounts.Add(new Accounts() { firtName="Đỗ", lastName="Linh", email="admin1@gmail.com", phone="0131223425", password="admin1"});
+            arrAccounts.Add(new Accounts() { firtName = "Kiều", lastName = "Thu", email = "admin2@gmail.com", phone = "2131242425", password = "admin2" });
+            arrAccounts.Add(new Accounts() { firtName = "Nguyễn", lastName = "Long", email = "admin3@gmail.com", phone = "0923423425", password = "admin3" });
+            Application.Add("Accounts", arrAccounts);
         }
 
         protected void Session_Start(object sender, EventArgs e)

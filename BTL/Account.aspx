@@ -1,11 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="BTL.Home" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Account.aspx.cs" Inherits="BTL.Account" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta charset="utf-8" />
     <title></title>
-    <link href="~/Assets/Css/Home.css" type="text/css" rel="stylesheet" runat="server"/>
+    <link href="~/Assets/Css/Account.css" type="text/css" rel="stylesheet" runat="server"/>
     <link href="~/Assets/Icon/css/all.min.css" type="text/css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <script language="javascript">
@@ -152,95 +152,57 @@
             
         </div>
         <div class="content">
-            <div class="banner">
-                <img class="banner-img1" src="Assets/Images/banner11.png"/>
-                <div class="content-banner">
-                    <span id="tt1">Chào hè cùng T-store</span>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <span id="tt2">GIẢM GIÁ KỊCH SÀN</span>
-                    <br/>
-                    <span id="tt3">HÀNG NGÀN QUÀ TẶNG</span>
-                    <br/>
-                    <input type="button" value="MUA NGAY!" id="btnShopNow"/>
-                </div>
-                <img class="banner-img2" src="Assets/Images/banner2.png"/>       
-            </div>
-            <div class="service">
-               <div class="itemservice">
-                   <i class="fas fa-shipping-fast"></i>
-                   <div class="itemservice-content">
-                       Giao hàng tốc độ
-                       <div class="itemservice-content_child">Thời gian giao hàng chỉ trong 1 ngày</div>
-                    </div>
+             <h2 id="itemPath" runat="server">Trang chủ/Tài khoản</h2>
+           <div class="form">
+               <div class="form-login">
+                   <h2 class="form-tt">Đăng Nhập</h2>
+                   <p class="form-child-tt">Nếu bạn đã có tài khoản, hãy đăng nhập để tích lũy điểm thành viên và nhận được những ưu đãi tốt hơn!</p>
+                   <label for="txtLoginUser" class="form-label">Email:</label>
+                   <br />
+                   <input type="text" id="txtLoginEmail" placeholder="Email" class="form-input" />
+                   <br />
+                   <br />
+                    <label for="txtLoginPass" class="form-label">Mật khẩu:</label>
+                   <br />
+                   <input type="text" id="txtLoginPass" placeholder="Mật khẩu" class="form-input"/>
+                   <br />
+                   <a class="form-link" href="#">Quên mật khẩu?</a>
+                   <br />
+                   <button class="form-btn">ĐĂNG NHẬP</button>
                </div>
-               <div class="itemservice">
-                <i class="fas fa-money-bill-alt    "></i>
-                <div class="itemservice-content">
-                    Thanh toán an toàn
-                    <div class="itemservice-content_child">Hỗ trợ thanh toán trên nhiều nền tảng</div>
-                 </div>
+               <div class="form-signup">
+                   <h2 class="form-tt">Đăng Ký</h2>
+                    <p class="form-child-tt">Hãy đăng ký ngay để tích lũy điểm thành viên và nhận được những ưu đãi tốt hơn từ chúng tôi!</p>
+                   <label for="txtSignUpFN" class="form-label">Họ:</label>
+                   <br />
+                   <input type="text" id="txtSignUpFN" placeholder="Họ" class="form-input" />
+                   <br />
+                   <br />
+                    <label for="txtSignUpLN" class="form-label">Tên:</label>
+                   <br />
+                   <input type="text" id="txtSignUpLN" placeholder="Tên" class="form-input" />
+                   <br />
+                   <br />
+                    <label for="txtSignUpEmail" class="form-label">Email:</label>
+                   <br />
+                   <input type="text" id="txtSignUpEmail" placeholder="Email" class="form-input" />
+                   <br />
+                   <br />
+                    <label for="txtSignUpPhone" class="form-label">Số điện thoại:</label>
+                   <br />
+                   <input type="text" id="txtSignUpPhone" placeholder="Số điện thoại" class="form-input" />
+                   <br />
+                   <br />
+                    <label for="txtSignUpPass" class="form-label">Mật khẩu:</label>
+                   <br />
+                   <input type="text" id="txtSignUpPass" placeholder="Mật khẩu" class="form-input"/>
+                   <br />
+                   <label for="idSubmitNew" class="form-child-tt"><input type="checkbox" id="idSubmitNew"/> Đăng kí nhận tin</label>
+                   <br />
+                   <label for="idSubmitRule" class="form-child-tt"><input type="checkbox" id="idSubmitRule"/> Đồng ý với các <a href="#">Điều khoản</a> của T-Store</label>
+                   <br />
+                   <button class="form-btn">ĐĂNG KÝ</button>
                </div>
-               <div class="itemservice">
-                <i class="fab fa-servicestack"></i>
-                <div class="itemservice-content">
-                    Dịch vụ chất lượng
-                    <div class="itemservice-content_child">Giao dịch dễ dàng với dịch vụ tốt nhất</div>
-                 </div>
-               </div>
-            </div>
-            <div class="menu-image">
-                <div class="menu-image-left">
-                   <p><i>SALE OFF UPTO 50%!</i></p>
-                   <input type="button" value="Xem chi tiết!" id="btnWatchNow"/>
-                </div>
-                <div class="menu-image-right">
-                        <div class="menu-image-right-0">
-                            THỜI TRANG NỮ
-                        </div>
-                        <div class="menu-image-right-1">
-                            THỜI TRANG NAM
-                        </div>
-                </div>
-            </div>
-            <div class="product-container1">
-                 <h1><i>Siêu giảm giá!</i></h1>
-                <hr />
-                <div id="product1" class="product-container1-list" runat="server">
-                </div>
-                <input type="button" value="Xem Thêm" id="btnShowMore1" runat="server"/>
-            </div>
-            <div class="product-container2">
-                 <h1>Hàng mới về</h1>
-                <hr />
-                <div id="product2" class="product-container1-list" runat="server">
-                </div>
-                <input type="button" value="Xem Thêm" id="btnShowMore2"/>
-            </div>
-            <div class="product-container3">
-                 <h1>Top bán chạy</h1>
-                <hr />
-                <div class="product3">
-                     <div class="collumn" >
-                         <h3><u>Thời trang nữ</u></h3>
-                            <div class="listtop" id="listtopwm" runat="server">
-                            
-                            </div>
-                     </div>
-                    <div class="collumn" >
-                        <h3><u>Thời trang nam</u></h3>
-                        <div class="listtop" id="listtopm" runat="server">
-                            
-                        </div>
-                    </div>
-                    <div class="collumn ">
-                        <h3><u>Phụ Kiện</u></h3>
-                            <div class="listtop" id="listtops" runat="server">
-                            
-                            </div>
-                    </div>
-                </div>
            </div>
     </div>
     <div class="footer">
@@ -300,38 +262,7 @@
         </div>
     </div>
     <button id="btnHead" onclick="document.location.href='#logo';"><i class="fas fa-chevron-up"></i></button>
-    <div class="dialog" id="dialog">
-        <div class="dialog-head">
-           <h3>Chọn size:</h3>
-           <div class="container-btn-size">
-                            <input type="radio" id="sizeS" name="radioSize" value="S" checked="checked"/>
-                            <label for="sizeS">S</label>
-                            <input type="radio" id="sizeM" name="radioSize" value="M" />
-                            <label for="sizeM">M</label>
-                            <input type="radio" id="sizeL" name="radioSize" value="L"/>
-                            <label for="sizeL">L</label>
-                            <input type="radio" id="sizeX" name="radioSize" value="X"/>
-                            <label for="sizeX">X</label>
-                            <input type="radio" id="sizeXL" name="radioSize" value="XL"/>
-                            <label for="sizeXL">XL</label>
-               </div>
-            <h3>Chọn màu:</h3>
-           <div class="container-btn-color">
-                            <input type="radio" id="color1" name="radioColor" value="Màu Xám" checked="checked"/>
-                            <label for="color1"></label>
-                            <input type="radio" id="color2" name="radioColor" value="Màu Sữa" />
-                            <label for="color2"></label>
-                            <input type="radio" id="color3" name="radioColor" value="Màu Xanh" />
-                            <label for="color3"></label>
-                            <input type="radio" id="color4" name="radioColor" value="Màu Đen" />
-                            <label for="color4"></label>
-                           
-            </div>
-        </div>
-        <div class="dialog-btn">
-            <button class="btnATW">Thêm vào yêu thích</button>  <button class="btnATC" onclick="addToCart()">Thêm vào giỏ</button>
-        </div>
-        <button class="close-dialog" onclick="closeDialog()"><i class="fas fa-times"></i></button>
-    </div>
+   
 </body>
 </html>
+

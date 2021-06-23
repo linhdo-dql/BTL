@@ -8,21 +8,20 @@
     <link href="~/Assets/Css/Detail.css" type="text/css" rel="stylesheet" runat="server"/>
     <link href="~/Assets/Icon/css/all.min.css" type="text/css" rel="stylesheet"/>
     <script language="javascript">
-        var bol = true;
-        function sizeClick(obj)
-        {
-            var x = document.getElementById(obj.id);
-
-            if (bol) {
-                
-                x.style.cssText = "background-color:#000; color:#fff;";
-                bol = false;
+        function cartClick() {
+            var cart = document.getElementById("cart-home");
+            if (cart.style.display == "none") {
+                cart.style.display = "block";
             }
             else {
-                x.style.cssText = "background-color:#fff; color:#000;";
-                bol = true;
+                cart.style.display = "none";
             }
-            
+        }
+        function addToCart(obj) {
+            var id = obj.id;
+            var color = document.querySelector('input[name=radioColor]:checked').value;
+            var size = document.querySelector('input[name=radioSize]:checked').value;
+            window.location.href = "Detail.aspx?id=" + id + "&color=" + color + "&size=" + size;
         }
     </script>
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'/>
@@ -43,7 +42,7 @@
         <div class="headerMid-menu-left">
             <ul class="headerMid-menu-left_list">
                 <li class="headerMid-menu-left_list_items">
-                    Trang chủ
+                    <a href="Home.aspx">Trang chủ</a>
                 </li>
                 <li class="headerMid-menu-left_list_items">
                     Thời trang nam
@@ -94,41 +93,59 @@
    <div class="content-detail-1">
        <div class="tt-detail">
             <div class="tt-detail-l">
-                   <h2 id="itemName">Trang chủ / Thời Trang Nam / Áo nam 5</h2>
+                   <h2 id="itemPath" runat="server"></h2>
                </div>
                <div class="tt-detail-r">
-                   Phải
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-skype"></i>
+                <i class="fab fa-instagram"></i>
                </div>
        </div>
        <div class="container-item-detail">
             <div class="item-detail-l">
-                <div class="img-detail">
-                        <img class="Img1" src="Assets/Images/nam/nam5.jpg" runat="server"/>
-                        <img class="Img1" src="Assets/Images/nam/nam5.jpg" runat="server"/>
-                        <img class="Img1" src="Assets/Images/nam/nam5.jpg" runat="server"/>
-                        <img class="Img1" src="Assets/Images/nam/nam5.jpg" runat="server"/>
-                        <img class="Img1" src="Assets/Images/nam/nam5.jpg" runat="server"/>
-                    </div>
+                <div class="img-detail" id="imgDetail1" runat="server">
+                      
+                   </div>
                    <img id="itemImgMain" src="Assets/Images/nam/nam5.jpg" runat="server"/>
                     
                </div>
                <div class="item-detail-r">
-                     <h1 id="itemNameMain">ÁO nam 5</h1>
-                     <p id="itemPriceMain">1.500.000</p>
-                     <p id="itemDetailMain">jkfhasjkl,a,fssssssssss,f;âfkaksfjjjjkksssssssssssssssssssssssssssssssdfjhuiashfuihiuhrihfdsinfksnfijhsadfuihiasdfnjkashfidhasidfhjahfduiahuiwhurifashdfuiahurehwjfbweaueuafbjdsabffwuEHFUAHFUAUHEWUSSS</p>
+                     <h1 id="itemNameMain" runat="server">ÁO nam 5</h1>
+                     <p id="itemPriceMain" runat="server">1.500.000</p>
+                     <p id="itemDetailMain" runat="server">jkfhasjkl,a,fssssssssss,f;âfkaksfjjjjkksssssssssssssssssssssssssssssssdfjhuiashfuihiuhrihfdsinfksnfijhsadfuihiasdfnjkashfidhasidfhjahfduiahuiwhurifashdfuiahurehwjfbweaueuafbjdsabffwuEHFUAHFUAUHEWUSSS</p>
                      <div class="detail-select">
-                         <h3>Chọn size</h3>
                          <div class="container-btn-detail">
-                             <button class="btn-size" id="sizeS" onclick="sizeClick(this)">S</button>
-                             <button class="btn-size" id="sizeM" onclick="sizeClick(this)">M</button>
-                             <button class="btn-size" id="sizeX" onclick="sizeClick(this)">X</button>
-                             <button class="btn-size" id="sizeL" onclick="sizeClick(this)">L</button>
-                             <button class="btn-size" id="sizeXL" onclick="sizeClick(this)">XL</button>
-                         </div>
+                            <h3>Chọn size:</h3>
+                            <div class="container-btn-size">
+                            <input type="radio" id="sizeS" name="radioSize" value="S" checked="checked"/>
+                            <label for="sizeS">S</label>
+                            <input type="radio" id="sizeM" name="radioSize" value="M" />
+                            <label for="sizeM">M</label>
+                            <input type="radio" id="sizeL" name="radioSize" value="L"/>
+                            <label for="sizeL">L</label>
+                            <input type="radio" id="sizeX" name="radioSize" value="X"/>
+                            <label for="sizeX">X</label>
+                            <input type="radio" id="sizeXL" name="radioSize" value="XL"/>
+                            <label for="sizeXL">XL</label>
+                        </div>
+                            <h3>Chọn màu:</h3>
+                            <div class="container-btn-color">
+                            <input type="radio" id="color1" name="radioColor" value="Màu Xám" checked="checked"/>
+                            <label for="color1"></label>
+                            <input type="radio" id="color2" name="radioColor" value="Màu Sữa" />
+                            <label for="color2"></label>
+                            <input type="radio" id="color3" name="radioColor" value="Màu Xanh" />
+                            <label for="color3"></label>
+                            <input type="radio" id="color4" name="radioColor" value="Màu Đen" />
+                            <label for="color4"></label>
+                           
+                        </div>
+                      </div>
                      </div>
-                    <span id="voucher-detail">Mã giảm giá: </span> <input id="txtVoucherD" type="text" />
+                   
                    <div class="btn-detail-r">
-                       <button class="btnATC">Thêm vào giỏ</button>
+                       <button class="btnATC"  id="idItems" runat="server" onclick="addToCart(this)">Thêm vào giỏ</button>
                        <br />
                        <button class="btnATW">Thêm vào yêu thích</button>
                    </div>

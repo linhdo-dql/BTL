@@ -20,7 +20,6 @@ namespace BTL
             List<Products> hbp1 = new List<Products>();
             List<Products> hbp2 = new List<Products>();
             List<Products> hbp3 = new List<Products>();
-            hsp.Clear();
             product1.InnerHtml = "";
             foreach (Products x in s)
             {
@@ -62,14 +61,14 @@ namespace BTL
             foreach (Products z in hsp)
             {
                 product1.InnerHtml += "<div class='product-container1-list-items' id=" + z.id + ">" +
-                   "<a href='Detail.aspx?id=" + z.id + "'><img class='product-items-img' src='" + z.img + "'/></a>" +
-                   "<a id = 'product-items-name' href='Detail.aspx?id=" + z.id + "'>" + z.name + " </a>" +
+                   "<img class='product-items-img' src='" + z.img + "' onclick='showDetail(this)'/>" +
+                   "<a id = 'product-items-name' onclick='showDetail(this)'>" + z.name + " </a>" +
                    "<div id='container-price'>" +
                    "<span id = 'product-items-oldprice' ><strike>" + z.oldprice + "</strike></span>" +
                    "<span id = 'product-items-price'> " + z.price + " </span>" +
                    "</div>" +
                    "<div class='container-button-items'>" +
-                   "<button class='btnAddToCart' id='btnAddToCartx" + z.id + " runat='server' onclick='SizeColor()'>Thêm vào giỏ</button>" +
+                   "<button class='btnAddToCart' id='btnAddToCartx" + z.id +"' runat='server' onclick='SizeColor(this)'>Thêm vào giỏ</button>" +
                    "<button class = 'btnAddToWhis' id = 'btnAddToWhis" + z.id + "' onclick='return ht(this)' ><i class='far fa-heart' aria-hidden='true'></i></button>" +
                    "</div>" +
                    "</div>";
@@ -77,23 +76,23 @@ namespace BTL
             foreach (Products y in np)
             {
                 product2.InnerHtml += "<div class='product-container1-list-items' id=" + y.id + ">" +
-                    "<a href='Detail.aspx?id=" + y.id + "'><img class='product-items-img' src='" + y.img + "'/></a>" +
-                    "<a id = 'product-items-name2' href='Detail.aspx?id=" + y.id + "'> " + y.name + " </a>" +
+                    "<img class='product-items-img' src='" + y.img + "' onclick='showDetail(this)'/></a>" +
+                    "<a id = 'product-items-name2' onclick='showDetail(this)'> " + y.name + " </a>" +
                     "<div id='container-price'>" +
                     "<span id = 'product-items-price2'> " + y.price + " </span>" +
                     "</div>" +
                     "<div class='container-button-items'>" +
-                    "<a href='Home.aspx?id=" + y.id + "'><button class='btnAddToCart' id='btnAddToCart" + y.id + "' onclick='addClick()'>Thêm vào giỏ</button></a>" +
-                    "<button class= 'btnAddToWhis2' id = 'btnAddToWhis" + y.id + "' ><i class='far fa-heart' aria-hidden='true'></i></button>" +
+                    "<button class='btnAddToCart' id='btnAddToCartx" + y.id + "' runat='server' onclick='SizeColor(this)'>Thêm vào giỏ</button>" +
+                   "<button class = 'btnAddToWhis' id = 'btnAddToWhis" + y.id + "' onclick='return ht(this)' ><i class='far fa-heart' aria-hidden='true'></i></button>" +
                     "</div>" +
                     "</div>";
             }
              foreach (Products x1 in hbp1)
             {
-                listtopwm.InnerHtml+= "<div class='listtop-items'>"+
-                                      "<a href ='Detail.aspx?id=1'><img src='" +x1.img+"'/></a>"+
+                listtopwm.InnerHtml+= "<div class='listtop-items' id='"+x1.id+"'>"+
+                                      "<img src='" +x1.img+ "' onclick='showDetail(this)'/></a>" +
                                       "<div class='listtop-content'>"+
-                                      "<p class='listop-name'>"+x1.name+"</p>"+
+                                      "<p class='listop-name' onclick='showDetail(this)'>" + x1.name+"</p>"+
                                       "<p class='listop-detail'>"+x1.detail+"</p>"+
                                       "<p class='listop-price'>"+x1.price+"</p>" +
                                       "</div>"+
@@ -101,10 +100,10 @@ namespace BTL
             }
             foreach (Products x2 in hbp2)
             {
-                listtopm.InnerHtml += "<div class='listtop-items'>" +
-                                      "<a href ='Detail.aspx?id=1'><img src='" + x2.img + "'/></a>" +
+                listtopm.InnerHtml += "<div class='listtop-items' id='" + x2.id + "'>" +
+                                      "<img src='" + x2.img + "' onclick='showDetail(this)'/></a>" +
                                       "<div class='listtop-content'>" +
-                                      "<p class='listop-name'>" + x2.name + "</p>" +
+                                      "<p class='listop-name' onclick='showDetail(this)'>" + x2.name + "</p>" +
                                       "<p class='listop-detail'>" + x2.detail + "</p>" +
                                       "<p class='listop-price'>" + x2.price + "</p>" +
                                       "</div>" +
@@ -112,10 +111,10 @@ namespace BTL
             }
             foreach (Products x3 in hbp3)
             {
-                listtops.InnerHtml += "<div class='listtop-items'>" +
-                                      "<a href ='Detail.aspx?id=1'><img src='" + x3.img + "'/></a>" +
+                listtops.InnerHtml += "<div class='listtop-items' id='" + x3.id + "'>" +
+                                      "<img src='" + x3.img + "' onclick='showDetail(this)'/>" +
                                       "<div class='listtop-content'>" +
-                                      "<p class='listop-name'>" + x3.name + "</p>" +
+                                      "<p class='listop-name' onclick='showDetail(this)'>" + x3.name + "</p>" +
                                       "<p class='listop-detail'>" + x3.detail + "</p>" +
                                       "<p class='listop-price'>" + x3.price + "</p>" +
                                       "</div>" +
@@ -135,21 +134,24 @@ namespace BTL
                 cartlistItems.InnerText = "Trống";
                 btnPay.Attributes["style"] = "display:none;";
             }
+           clearItems();
         }
         public List<Cart> AddCartItem(List<Products> s)
         {   
-            string a = Request.QueryString["id"];
+            string id = Request.QueryString["id"];
+            string color = Request.QueryString["color"];
+            string size = Request.QueryString["size"];
             List<Cart> c = (List<Cart>)Application["cart"];
-            if (a != null)
+            if (id != null)
             {
                 foreach (Products x in s)
                 {
-                    if (int.Parse(x.id) == int.Parse(a))
+                    if (int.Parse(x.id) == int.Parse(id))
                     {
-                       // c.Add(new Cart(x.img, x.name, "1", x.price));
+                       c.Add(new Cart(x.id, x.img, x.name, "1", x.price, size, color));
                     }
                 }
-                Response.Redirect("Home.aspx#" + a);
+               Response.Redirect("Home.aspx#"+id );
             }
             return c;
         }
@@ -157,15 +159,16 @@ namespace BTL
         {
             foreach (Cart x in s)
             {
-                cartlistItems.InnerHtml += "<div class='items-cart-icon'>" +
+                cartlistItems.InnerHtml += "<div class='items-cart-icon' >" +
                         "<img class='items-img-cart' src='" + x.img + "'/>" +
                         "<div class='items-content-cart'>" +
                             "<span class='items-name-cart'>" + x.name + "</span>" +
                             "<br />" +
-                             "<p class='items-number-cart'>Số lượng: " + x.number + "</p>" +
+                             "<p class='items-number-cart'>Số lượng: " + x.number + "<br />"+ x.color + "<br />Size: " + x.size+"</p>" +
                         "</div>" +
-                        "<div class='items-price-cart'>" +
+                        "<div class='items-price-cart' >" +
                             "<span class='items-price-cart1'>" + x.price + "</span>" +
+                            "<br /><span class='btn-clear-items-cart' onclick='delItems(this)' id='Clear" + x.id + "'>Xóa</span>" +
                         "</div>" +
                     "</div>";
             }
@@ -180,7 +183,23 @@ namespace BTL
             }
             return s.ToString();
         }
-
+        public void clearItems()
+        {
+            string s = Request.QueryString["clear"];
+            List<Cart> arr = (List<Cart>)Application["cart"];
+            if(s!=null)
+            {
+                foreach (Cart x in arr)
+                {
+                    if (x.id == s)
+                    {
+                        arr.Remove(x);
+                    }
+                    Response.Redirect("Home.aspx");
+                }
+            }    
+            
+        }
         
     }
     

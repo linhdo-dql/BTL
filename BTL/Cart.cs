@@ -7,6 +7,7 @@ namespace BTL
 {
     public class Cart
     {   
+        public string id { get; set; }
         public string img { get; set; }
         public string name { get; set; }
         public string number { get; set; }
@@ -17,8 +18,9 @@ namespace BTL
         {
         }
 
-        public Cart(string img, string name, string number, string price, string size, string color)
+        public Cart(string id, string img, string name, string number, string price, string size, string color)
         {
+            this.id = id;
             this.img = img;
             this.name = name;
             this.number = number;
